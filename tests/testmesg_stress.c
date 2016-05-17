@@ -42,7 +42,7 @@
 #error "Missing BUILD_DIR information"
 #endif /* BUILD_DIR */
 
-
+static size_t tbuflen = 0;
 /* The number of times each operation is repeated to measure the average operation time */
 #define DEFAULT_NUMBER_OF_SAMPLES	100000
 

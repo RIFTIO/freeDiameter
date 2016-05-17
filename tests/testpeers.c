@@ -38,6 +38,7 @@
 const char * ids[] = { "b11", "b14", "b1", "b4" };
 #define DomainName "localdomain"
 
+static size_t tbuflen = 0;
 /* Main test routine */
 int main(int argc, char *argv[])
 {

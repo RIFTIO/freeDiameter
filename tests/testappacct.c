@@ -56,7 +56,7 @@ CREATE TABLE <table>
 */
 #define TABLE "incoming_test"
 
-#include "app_acct.h"
+#include "../extensions/app_acct/app_acct.h"
 #include <libpq-fe.h>
 
 static int add_avp_in_conf(char * avpname, int multi) 

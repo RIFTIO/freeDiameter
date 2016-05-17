@@ -62,15 +62,18 @@ GCC_DIAG_ON("-Wdeprecated-declarations")
 #include <signal.h>
 
 /* Define the return code values */
+#ifndef PASS
 #define PASS	0
-#define FAIL	1
+#endif
+
+#define FDFAIL	1
 
 /* Define the macro to fail a test with a message */
 #define FAILTEST( message... ){				\
 	LOG_F(message);					\
 	LOG_F("FAILED: %s ", __STRIPPED_FILE__);	\
 	free(tbuf);					\
-	exit(FAIL);					\
+	exit(FDFAIL);					\
 }
 
 /* Define the macro to pass a test */
@@ -87,7 +90,8 @@ static struct fd_config conf;
 extern struct fd_config * fd_g_config;
 
 /* for dumps */
-static char * tbuf = NULL; size_t tbuflen = 0;
+static char * tbuf = NULL; 
+/*size_t tbuflen = 0; */
 #define FD_DUMP_TEST_PARAMS &tbuf, &tbuflen, NULL
 
 

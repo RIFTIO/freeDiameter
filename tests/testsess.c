@@ -90,6 +90,8 @@ void * g_opaque = (void *)"test";
 #define strcmp(s1,s2) strcmp((char *)s1, (char *)s2)
 	
 
+static size_t tbuflen = 0;
+
 /* Main test routine */
 int main(int argc, char *argv[])
 {

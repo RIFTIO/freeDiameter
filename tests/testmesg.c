@@ -35,6 +35,8 @@
 
 #include "tests.h"
 
+static size_t tbuflen = 0;
+
 /* Main test routine */
 int main(int argc, char *argv[])
 {
@@ -646,7 +648,7 @@ int main(int argc, char *argv[])
 		struct msg * msg;
 		
 		#define CPYBUF() {			\
-			buf_cpy = malloc(344);		\
+			buf_cpy = (unsigned char *) malloc(344);		\
 			CHECK( buf_cpy ? 1 : 0, 1);	\
 			memcpy(buf_cpy, buf, 344);	\
 		}

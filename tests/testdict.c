@@ -35,6 +35,7 @@
 
 #include "tests.h"
 
+static size_t tbuflen = 0;
 /* Test for the dict_iterate_rules function */
 int iter_test(void * data, struct dict_rule_data * rule)
 {
